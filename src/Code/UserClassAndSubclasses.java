@@ -1,13 +1,15 @@
+package Code;
+
 import java.io.Serializable;
 import java.util.List;
 
-// User class is an abstract class that represents a user in the system
+// Code.User class is an abstract class that represents a user in the system
 abstract class User implements Serializable {
     protected String username;
     protected String password;
     protected String role;
 
-    // Constructor to initialize the User object
+    // Constructor to initialize the Code.User object
     public User(String username, String password, String role) {
         this.username = username;
         this.password = password;
@@ -37,7 +39,7 @@ abstract class User implements Serializable {
         return this.password.equals(password);
     }
 
-    // Override the toString method to return the User object as a string
+    // Override the toString method to return the Code.User object as a string
     @Override
     public String toString() {
         return "User[Username=" + username + ", Role=" + role + "]";
@@ -53,7 +55,7 @@ abstract class User implements Serializable {
 }
 
 
-// Cashier class is a subclass of User class
+// Code.Cashier class is a subclass of Code.User class
 class Cashier extends User {
     public Cashier(String username, String password) {
         super(username, password, "Cashier");
@@ -96,9 +98,9 @@ class Cashier extends User {
 }
 
 
-// Manager class is a subclass of Cashier class
+// Code.Manager class is a subclass of Code.Cashier class
 class Manager extends Cashier {
-    // Constructor to initialize the Manager object
+    // Constructor to initialize the Code.Manager object
     public Manager(String username, String password) {
         super(username, password);
         this.role = "Manager";

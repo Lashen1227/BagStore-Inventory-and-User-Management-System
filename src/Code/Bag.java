@@ -1,6 +1,8 @@
+package Code;
+
 import java.io.Serializable;
 
-// Bag class is a serializable class that represents a bag in the system
+// Code.Bag class is a serializable class that represents a bag in the system
 class Bag implements Serializable {
     private String id;
     private String name;
@@ -9,7 +11,7 @@ class Bag implements Serializable {
     private double price;
 
 
-    // Constructor to initialize the Bag object
+    // Constructor to initialize the Code.Bag object
     public Bag(String id, String name, String category, String colour, double price) {
         this.id = id;
         this.name = name;
@@ -46,10 +48,10 @@ class Bag implements Serializable {
         this.price = price;
     }
 
-    // Override the toString method to return the Bag object as a string
+    // Override the toString method to return the Code.Bag object as a string
     @Override
     public String toString() {
-        return "Bag[ID=" + id + ", Name=" + name + ", Category=" + category + ", Colour=" + colour + ", Price=" + price + "]";
+        return "Code.Bag[ID=" + id + ", Name=" + name + ", Category=" + category + ", Colour=" + colour + ", Price=" + price + "]";
     }
 }
 

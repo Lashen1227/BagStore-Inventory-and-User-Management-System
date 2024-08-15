@@ -1,3 +1,5 @@
+package Code;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +11,7 @@ class BagShop {
     private final String USER_FILE = "users.ser";
 
 
-    // Constructor to initialize the BagShop object
+    // Constructor to initialize the Code.BagShop object
     public BagShop() {
         this.bags = new ArrayList<>();
         this.users = new ArrayList<>();

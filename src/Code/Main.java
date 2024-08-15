@@ -1,3 +1,5 @@
+package Code;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -7,7 +9,7 @@ public class Main {
         BagShop shop = new BagShop();
         Scanner scanner = new Scanner(System.in);
 
-        // Sample Manager User Account
+        // Sample Code.Manager Code.User Account
         Manager manager = new Manager("admin", "admin");
         shop.addUser(manager);
 
@@ -24,7 +26,7 @@ public class Main {
 
                 switch (choice) {
                     case 1:
-                        System.out.println("\nCashier Login:- ");  // Cashier Login
+                        System.out.println("\nCashier Login:- ");  // Code.Cashier Login
                         System.out.print("Enter username: ");
                         String cashierUsername = scanner.nextLine();
                         System.out.print("Enter password: ");
@@ -33,7 +35,7 @@ public class Main {
                         User cashierUser = shop.authenticateUser(cashierUsername, cashierPassword);
 
                         if (cashierUser != null && cashierUser instanceof Cashier) {
-                            System.out.println("Logged in as Cashier.");
+                            System.out.println("Logged in as Code.Cashier.");
                             System.out.println("Welcome, " + cashierUser.getUsername() + " to the " + cashierUser.getRole() + " Page!");
                             cashierOptions(scanner, (Cashier) cashierUser, shop);
                         } else {
@@ -41,7 +43,7 @@ public class Main {
                         }
                         break;
                     case 2:
-                        System.out.println("\nManager Login:- ");  // Manager Login
+                        System.out.println("\nManager Login:- ");  // Code.Manager Login
                         System.out.print("Enter username: ");
                         String managerUsername = scanner.nextLine();
                         System.out.print("Enter password: ");
@@ -75,10 +77,10 @@ public class Main {
     }
 
     /**
-     * Cashier Options Menu
+     * Code.Cashier Options Menu
      * @param scanner Scanner object to read input
-     * @param cashier Cashier object to perform actions
-     * @param shop BagShop object to access data
+     * @param cashier Code.Cashier object to perform actions
+     * @param shop Code.BagShop object to access data
      */
     private static void cashierOptions(Scanner scanner, Cashier cashier, BagShop shop) {
         while (true) {
@@ -87,7 +89,7 @@ public class Main {
                 System.out.println("**** Cashier Menu ****");
                 System.out.println("**********************");
                 System.out.println("1. View Bags");
-                System.out.println("2. Add Bag");
+                System.out.println("2. Add Code.Bag");
                 System.out.println("3. Delete Bag by ID");
                 System.out.println("4. Search Bags by Category");
                 System.out.println("5. Logout");
@@ -129,10 +131,10 @@ public class Main {
     }
 
     /**
-     * Manager Options Menu
+     * Code.Manager Options Menu
      * @param scanner Scanner object to read input
-     * @param manager Manager object to perform actions
-     * @param shop BagShop object to access data
+     * @param manager Code.Manager object to perform actions
+     * @param shop Code.BagShop object to access data
      */
     private static void managerOptions(Scanner scanner, Manager manager, BagShop shop) {
         while (true) {
@@ -197,10 +199,10 @@ public class Main {
     }
 
     /**
-     * Add a Bag with a Unique ID
+     * Add a Code.Bag with a Unique ID
      * @param scanner Scanner object to read input
-     * @param user User object to add the bag
-     * @param shop BagShop object to check for unique ID
+     * @param user Code.User object to add the bag
+     * @param shop Code.BagShop object to check for unique ID
      */
     private static void addBagWithUniqueID(Scanner scanner, User user, BagShop shop) {
         System.out.println("\nAdd a New Bag:- ");
@@ -223,7 +225,7 @@ public class Main {
                 System.out.println("Bag added successfully.");
                 break;
             } else {
-                System.out.println("Bag ID already exists. Please enter a different Bag ID.");
+                System.out.println(".Bag ID already exists. Please enter a different Code.Bag ID.");
             }
         }
     }
